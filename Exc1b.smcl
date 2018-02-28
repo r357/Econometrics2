@@ -1,0 +1,909 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\racunalnica\Documents\Econometric2\Exc1b.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Feb 2018, 08:56:41
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. use "$path\mus03data5.dta", clear
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. describe
+
+{txt}Contains data from {res}C:\Users\racunalnica\Documents\Econometric2\mus03data5.dta
+{txt}  obs:{res}         3,064                          
+{txt} vars:{res}            33                          15 Apr 2008 19:24
+{txt} size:{res}       710,848                          
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:dupersid       }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Subject ID{p_end}
+{p 0 48}{bind:year03         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if data is from MEPS 2003{p_end}
+{p 0 48}{bind:age            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Age{p_end}
+{p 0 48}{bind:famsze         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Size of the family{p_end}
+{p 0 48}{bind:educyr         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Years of education{p_end}
+{p 0 48}{bind:totexp         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total medical expenditure{p_end}
+{p 0 48}{bind:private        }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if private supplementary insurance{p_end}
+{p 0 48}{bind:retire         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if retired{p_end}
+{p 0 48}{bind:female         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if female{p_end}
+{p 0 48}{bind:white          }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if white{p_end}
+{p 0 48}{bind:hisp           }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if Hispanic{p_end}
+{p 0 48}{bind:marry          }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if married{p_end}
+{p 0 48}{bind:northe         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if northeast area{p_end}
+{p 0 48}{bind:mwest          }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if Midwest area{p_end}
+{p 0 48}{bind:south          }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if south area (West is excluded){p_end}
+{p 0 48}{bind:phylim         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if has functional limitation{p_end}
+{p 0 48}{bind:actlim         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if has activity limitation{p_end}
+{p 0 48}{bind:msa            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if metropolitan statistical area{p_end}
+{p 0 48}{bind:income         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}annual household income/1000{p_end}
+{p 0 48}{bind:injury         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if condition is caused by an accident/injury{p_end}
+{p 0 48}{bind:priolist       }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1  if has medical conditions that are on the priority list{p_end}
+{p 0 48}{bind:totchr         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}# of chronic problems{p_end}
+{p 0 48}{bind:omc            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if other managed care (Privately insured sample){p_end}
+{p 0 48}{bind:hmo            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}=1 if private insurance is HMO (Privately insured sample){p_end}
+{p 0 48}{bind:mnc            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:ratio          }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:posexp         }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}=1 if total expenditure > 0{p_end}
+{p 0 48}{bind:suppins        }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}=1 if has supp priv insurance{p_end}
+{p 0 48}{bind:hvgg           }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}=1 if health status is excellent, good or very good{p_end}
+{p 0 48}{bind:hfp            }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}=1 if health status is fair or poor{p_end}
+{p 0 48}{bind:ltotexp        }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}ln(totexp) if totexp > 0{p_end}
+{p 0 48}{bind:hins           }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Excellent health indicator{p_end}
+{p 0 48}{bind:hdem           }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Demographic group indicator{p_end}
+{txt}{hline}
+Sorted by:  {res}ltotexp
+{txt}
+{com}. ze
+{err}unrecognized command:  ze
+{txt}{search r(199):r(199);}
+
+end of do-file
+
+{search r(199):r(199);}
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. d age famsze
+
+              {txt}storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:age            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Age{p_end}
+{p 0 48}{bind:famsze         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Size of the family{p_end}
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. summarize
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}dupersid {c |}{res}      3064    6.24e+07    3.43e+07   2.00e+07   9.83e+07
+{txt}{space 6}year03 {c |}{res}      3064           1           0          1          1
+{txt}{space 9}age {c |}{res}      3064    74.17167    6.372938         65         90
+{txt}{space 6}famsze {c |}{res}      3064    1.907963    .9883496          1         13
+{txt}{space 6}educyr {c |}{res}      3064    11.77546    3.435878          0         17
+{txt}{hline 13}{c +}{hline 56}
+{space 6}totexp {c |}{res}      3064    7030.889    11852.75          0     125610
+{txt}{space 5}private {c |}{res}      3064    .5812663    .4934321          0          1
+{txt}{space 6}retire {c |}{res}      3064    .5946475    .4910403          0          1
+{txt}{space 6}female {c |}{res}      3064    .5796345    .4936982          0          1
+{txt}{space 7}white {c |}{res}      3064    .9742167    .1585141          0          1
+{txt}{hline 13}{c +}{hline 56}
+{space 8}hisp {c |}{res}      3064    .0848564    .2787134          0          1
+{txt}{space 7}marry {c |}{res}      3064    .5558094    .4969567          0          1
+{txt}{space 6}northe {c |}{res}      3064    .1517624     .358849          0          1
+{txt}{space 7}mwest {c |}{res}      3064    .2310705    .4215862          0          1
+{txt}{space 7}south {c |}{res}      3064    .3962141    .4891897          0          1
+{txt}{hline 13}{c +}{hline 56}
+{space 6}phylim {c |}{res}      3064    .4255875    .4945125          0          1
+{txt}{space 6}actlim {c |}{res}      3064    .2836162    .4508263          0          1
+{txt}{space 9}msa {c |}{res}      3064    .7415144    .4378737          0          1
+{txt}{space 6}income {c |}{res}      3064    22.47472    22.53491         -1     312.46
+{txt}{space 6}injury {c |}{res}      3064    .1964752    .3973968          0          1
+{txt}{hline 13}{c +}{hline 56}
+{space 4}priolist {c |}{res}      3064    .8028721    .3978947          0          1
+{txt}{space 6}totchr {c |}{res}      3064    1.754243    1.307197          0          7
+{txt}{space 9}omc {c |}{res}      3064    .4461488    .4971727          0          1
+{txt}{space 9}hmo {c |}{res}      3064    .1158616    .3201111          0          1
+{txt}{space 9}mnc {c |}{res}      3064    .0192559    .1374454          0          1
+{txt}{hline 13}{c +}{hline 56}
+{space 7}ratio {c |}{res}      3064    .0120952    .0958159          0          1
+{txt}{space 6}posexp {c |}{res}      3064    .9644256    .1852568          0          1
+{txt}{space 5}suppins {c |}{res}      3064    .5812663    .4934321          0          1
+{txt}{space 8}hvgg {c |}{res}      3064    .6054178    .4888406          0          1
+{txt}{space 9}hfp {c |}{res}      3064    .2078982    .4216508          0          2
+{txt}{hline 13}{c +}{hline 56}
+{space 5}ltotexp {c |}{res}      2955    8.059866    1.367592   1.098612   11.74094
+{txt}{space 8}hins {c |}{res}      1506           1           0          1          1
+{txt}{space 8}hdem {c |}{res}      1737           1           0          1          1
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sum totexp if age>=70
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}totexp {c |}{res}      2186    7305.277    11351.77          0     125610
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sum famsze in 1/10
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}famsze {c |}{res}        10         2.1    1.197219          1          5
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. list famsze in 1/10
+{txt}
+     {c TLC}{hline 8}{c TRC}
+     {c |} {res}famsze {txt}{c |}
+     {c LT}{hline 8}{c RT}
+  1. {c |} {res}     2 {txt}{c |}
+  2. {c |} {res}     1 {txt}{c |}
+  3. {c |} {res}     1 {txt}{c |}
+  4. {c |} {res}     5 {txt}{c |}
+  5. {c |} {res}     1 {txt}{c |}
+     {c LT}{hline 8}{c RT}
+  6. {c |} {res}     2 {txt}{c |}
+  7. {c |} {res}     3 {txt}{c |}
+  8. {c |} {res}     2 {txt}{c |}
+  9. {c |} {res}     2 {txt}{c |}
+ 10. {c |} {res}     2 {txt}{c |}
+     {c BLC}{hline 8}{c BRC}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sum famsze, detail
+
+                     {txt}Size of the family
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        1              1
+{txt} 5%    {res}        1              1
+{txt}10%    {res}        1              1       {txt}Obs         {res}       3064
+{txt}25%    {res}        1              1       {txt}Sum of Wgt. {res}       3064
+
+{txt}50%    {res}        2                      {txt}Mean          {res} 1.907963
+                        {txt}Largest       Std. Dev.     {res} .9883496
+{txt}75%    {res}        2             10
+{txt}90%    {res}        3             10       {txt}Variance      {res}  .976835
+{txt}95%    {res}        4             10       {txt}Skewness      {res} 2.822913
+{txt}99%    {res}        6             13       {txt}Kurtosis      {res} 18.14046
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. keep dupersid age educyr totexp
+{txt}
+{com}. sort dupersid
+{txt}
+{com}. save "$path\small", replace  
+{txt}(note: file C:\Users\racunalnica\Documents\Econometric2\small.dta not found)
+file C:\Users\racunalnica\Documents\Econometric2\small.dta saved
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. u "$path\mus03data5", clear
+{txt}
+{com}. drop age educyr totexp
+{txt}
+{com}. sort dupersid 
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. merge using "$path\small"
+{txt}{p}
+(note: you are using old
+{bf:merge} syntax; see
+{bf:{help merge:[D] merge}} for new syntax)
+{p_end}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. drop _merge
+{txt}
+{com}. order du* age educyr totexp 
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sort du*
+{txt}
+{com}. preserve 
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. display _N
+{res}3064
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. keep in 1/100
+{txt}(2964 observations deleted)
+
+{com}. dis _N
+{res}100
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sa "$path\first100.dta", replace
+{txt}(note: file C:\Users\racunalnica\Documents\Econometric2\first100.dta not found)
+file C:\Users\racunalnica\Documents\Econometric2\first100.dta saved
+
+{com}. restore
+{err}nothing to restore
+{txt}{search r(622):r(622);}
+
+end of do-file
+
+{search r(622):r(622);}
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. append using "$path\first100.dta"
+{txt}
+{com}. dis _N
+{res}200
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. rename dupersid id 
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. g lnexp = ln(totexp)
+{txt}(6 missing values generated)
+
+{com}. g age_sq = age^2
+{txt}
+{com}. g MW_NE = mwest + northe
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. g lnincome = ln(income)
+{txt}(6 missing values generated)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. replace lnincome = 0 if lnincome == .
+{txt}(6 real changes made)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. replace totexp = totexp/1000
+{txt}(194 real changes made)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sum income
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}income {c |}{res}       200    24.86241    34.16719          0     312.46
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. egen max_inc = max(income)
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. bysort northe mwest south (id): egen mean_inc = mean(income)
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. preserve
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. collapse (mean) avg_inc=income (median) med_income=income, ///
+>          by(northe mwest south)
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. sa "$path\income.dta", replace
+{txt}(note: file C:\Users\racunalnica\Documents\Econometric2\income.dta not found)
+file C:\Users\racunalnica\Documents\Econometric2\income.dta saved
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. restore
+{err}nothing to restore
+{txt}{search r(622):r(622);}
+
+end of do-file
+
+{search r(622):r(622);}
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. restore
+{err}nothing to restore
+{txt}{search r(622):r(622);}
+
+end of do-file
+
+{search r(622):r(622);}
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. u "$path\mus03data5", clear
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. drop age educyr totexp
+{txt}
+{com}. sort dupersid 
+{txt}
+{com}. 
+. *when merging two files, both have to be sorted by the merging variable
+. merge using "$path\small"
+{txt}{p}
+(note: you are using old
+{bf:merge} syntax; see
+{bf:{help merge:[D] merge}} for new syntax)
+{p_end}
+
+{com}. drop _merge
+{txt}
+{com}. order du* age educyr totexp 
+{txt}
+{com}. 
+. *Create two data sets with different observations
+. sort du*
+{txt}
+{com}. preserve 
+{txt}
+{com}. display _N
+{res}3064
+{txt}
+{com}. * Number of all observations: _N
+. keep in 1/100
+{txt}(2964 observations deleted)
+
+{com}. dis _N
+{res}100
+{txt}
+{com}. sa "$path\first100.dta", replace
+{txt}file C:\Users\racunalnica\Documents\Econometric2\first100.dta saved
+
+{com}. restore
+{txt}
+{com}. di _N
+{res}3064
+{txt}
+{com}. keep in 101/200
+{txt}(2964 observations deleted)
+
+{com}. 
+. * Preserve - stores the current state of the data
+. * Restore - restores the preserved state of the data (can only be used once with each preserve command)
+. 
+. append using "$path\first100.dta"
+{txt}
+{com}. dis _N
+{res}200
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. rename dupersid id 
+{res}{txt}
+{com}. 
+. g lnexp = ln(totexp)
+{txt}(5 missing values generated)
+
+{com}. g age_sq = age^2
+{txt}
+{com}. g MW_NE = mwest + northe
+{txt}
+{com}. 
+. g lnincome = ln(income)
+{txt}(12 missing values generated)
+
+{com}. replace lnincome = 0 if lnincome == .
+{txt}(12 real changes made)
+
+{com}. * Careful: double == in conditions
+. * Missing value: .
+. replace totexp = totexp/1000
+{txt}(195 real changes made)
+
+{com}. 
+. sum income
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}income {c |}{res}       200    24.96645     28.8973          0     312.46
+{txt}
+{com}. egen max_inc = max(income)
+{txt}
+{com}. bysort northe mwest south (id): egen mean_inc = mean(income)
+{txt}
+{com}. * Mean calculated by region, sorted by region AND id
+. 
+. preserve
+{txt}
+{com}. collapse (mean) avg_inc=income (median) med_income=income, ///
+>          by(northe mwest south)
+{txt}
+{com}. * In brackets: parameter for the variable that follows. Default: mean.   
+. sa "$path\income.dta", replace
+{txt}file C:\Users\racunalnica\Documents\Econometric2\income.dta saved
+
+{com}. restore
+{txt}
+{com}. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. label var age_sq "A square of age"
+{txt}
+{com}. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. tabulate female white
+
+    {txt}=1  if {c |}     =1  if white
+    female {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}         2         84 {txt}{c |}{res}        86 
+{txt}         1 {c |}{res}         1        113 {txt}{c |}{res}       114 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}         3        197 {txt}{c |}{res}       200 
+
+{txt}
+{com}. label define labelfemale 0 "Male" 1 "Female"
+{txt}
+{com}. label values female labelfemale 
+{txt}
+{com}. tab female white
+
+    {txt}=1  if {c |}     =1  if white
+    female {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+      Male {c |}{res}         2         84 {txt}{c |}{res}        86 
+{txt}    Female {c |}{res}         1        113 {txt}{c |}{res}       114 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}         3        197 {txt}{c |}{res}       200 
+
+{txt}
+{com}. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. twoway scatter totexp income 
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. twoway scatter totexp income if retire!=1, by(female)
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. twoway hist lnexp
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. local abc "totexp income female white famsze marry"
+{txt}
+{com}. sum `abc'
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}totexp {c |}{res}       200     7.48299    13.31542          0    100.419
+{txt}{space 6}income {c |}{res}       200    24.96645     28.8973          0     312.46
+{txt}{space 6}female {c |}{res}       200         .57    .4963181          0          1
+{txt}{space 7}white {c |}{res}       200        .985    .1218575          0          1
+{txt}{space 6}famsze {c |}{res}       200       1.835    .7685887          1          7
+{txt}{hline 13}{c +}{hline 56}
+{space 7}marry {c |}{res}       200         .61    .4889739          0          1
+{txt}
+{com}. * Careful with the single quotes! Left: AltGr+7, Right: usual English apostrophe
+. regress `abc'
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     200
+{txt}{hline 13}{char +}{hline 30}           F(  5,   194) ={res}    0.63
+    {txt}   Model {char |} {res} 566.798962     5  113.359792           {txt}Prob > F      = {res} 0.6744
+    {txt}Residual {char |} {res} 34715.9631   194  178.948263           {txt}R-squared     = {res} 0.0161
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res}-0.0093
+    {txt}   Total {char |} {res}  35282.762   199  177.300312           {txt}Root MSE      = {res} 13.377
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      totexp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}income {c |}{col 14}{res}{space 2}-.0051093{col 26}{space 2} .0335334{col 37}{space 1}   -0.15{col 46}{space 3}0.879{col 54}{space 4}-.0712461{col 67}{space 3} .0610275
+{txt}{space 6}female {c |}{col 14}{res}{space 2}-2.802941{col 26}{space 2} 2.054822{col 37}{space 1}   -1.36{col 46}{space 3}0.174{col 54}{space 4}-6.855601{col 67}{space 3} 1.249718
+{txt}{space 7}white {c |}{col 14}{res}{space 2} 1.446895{col 26}{space 2} 7.841108{col 37}{space 1}    0.18{col 46}{space 3}0.854{col 54}{space 4}-14.01787{col 67}{space 3} 16.91166
+{txt}{space 6}famsze {c |}{col 14}{res}{space 2}-.3323794{col 26}{space 2} 1.443817{col 37}{space 1}   -0.23{col 46}{space 3}0.818{col 54}{space 4}-3.179972{col 67}{space 3} 2.515213
+{txt}{space 7}marry {c |}{col 14}{res}{space 2} 1.450836{col 26}{space 2} 2.381661{col 37}{space 1}    0.61{col 46}{space 3}0.543{col 54}{space 4}-3.246436{col 67}{space 3} 6.148108
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 7.507943{col 26}{space 2} 8.466492{col 37}{space 1}    0.89{col 46}{space 3}0.376{col 54}{space 4}-9.190245{col 67}{space 3} 24.20613
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. local x=1
+{txt}
+{com}. local y=2
+{txt}
+{com}. scalar z=`x'+`y'
+{txt}
+{com}. dis z
+{res}3
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. local x=1
+{txt}
+{com}. local y=2
+{txt}
+{com}. scalar z=`x'+`y'
+{txt}
+{com}. dis z
+{res}3
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. local abc "totexp income female white famsze marry"
+{txt}
+{com}. 
+. foreach x of local abc {c -(}
+{txt}  2{com}.         egen mean_`x' = mean(`x')
+{txt}  3{com}.         label var mean_`x' "Mean of `x'"
+{txt}  4{com}. {c )-}
+{txt}
+{com}. 
+. forvalues i=0(1)17 {c -(}
+{txt}  2{com}.         egen mean_inc_`i' = mean(income) if educyr == `i'
+{txt}  3{com}.         label var mean_inc_`i' "Mean income for persons with `i' years of education"
+{txt}  4{com}. {c )-}       
+{txt}(197 missing values generated)
+(199 missing values generated)
+(196 missing values generated)
+(200 missing values generated)
+(197 missing values generated)
+(197 missing values generated)
+(191 missing values generated)
+(197 missing values generated)
+(186 missing values generated)
+(197 missing values generated)
+(190 missing values generated)
+(190 missing values generated)
+(138 missing values generated)
+(189 missing values generated)
+(182 missing values generated)
+(193 missing values generated)
+(178 missing values generated)
+(183 missing values generated)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. program define MyProg
+{txt}  1{com}.         dis _n "Description of `1'"
+{txt}  2{com}.         describe `1'
+{txt}  3{com}.         dis _n
+{txt}  4{com}.         quietly gen log`1' = ln(`1')
+{txt}  5{com}.         dis _n "Summary statistics"
+{txt}  6{com}.         sum log`1' `1'
+{txt}  7{com}.         dis _n
+{txt}  8{com}. end
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. MyProg income
+
+Description of income
+
+              {txt}storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:income         }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}annual household income/1000{p_end}
+
+
+
+Summary statistics
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 3}logincome {c |}{res}       188    2.967104    .7747642  -.6635884   5.744476
+{txt}{space 6}income {c |}{res}       200    24.96645     28.8973          0     312.46
+
+
+{txt}
+{com}. MyProg age
+
+Description of age
+
+              {txt}storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:age            }{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Age{p_end}
+
+
+
+Summary statistics
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}logage {c |}{res}       200    4.305221    .0859734   4.174387   4.442651
+{txt}{space 9}age {c |}{res}       200       74.36    6.447344         65         85
+
+
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. matrix A = (1 , 2 \ 3, 0)
+{txt}
+{com}. matrix list A
+{res}
+{txt}A[2,2]
+    c1  c2
+r1 {res}  1   2
+{txt}r2 {res}  3   0
+{reset}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. scalar a21 = A[2,1]
+{txt}
+{com}. dis a21
+{res}3
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. matrix P = (A') * A
+{txt}
+{com}. matrix list P
+{res}
+{txt}symmetric P[2,2]
+    c1  c2
+c1 {res} 10
+{txt}c2 {res}  2   4
+{reset}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. dis det(P)
+{res}36
+{txt}
+{com}. dis trace(P)
+{res}14
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. matrix IP = inv(P)
+{txt}
+{com}. matrix list IP
+{res}
+{txt}symmetric IP[2,2]
+            c1          c2
+c1 {res}  .11111111
+{txt}c2 {res} -.05555556   .27777778
+{reset}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. matrix U3 = I(3)
+{txt}
+{com}. matrix list U3
+{res}
+{txt}symmetric U3[3,3]
+    c1  c2  c3
+r1 {res}  1
+{txt}r2 {res}  0   1
+{txt}r3 {res}  0   0   1
+{reset}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. mata
+{txt}{hline 49} mata (type {cmd:end} to exit) {hline}
+{com}: {txt}{hline}
+{err}unexpected end of file (end statement missing)
+{txt}{search r(612):r(612);}
+
+end of do-file
+
+{search r(612):r(612);}
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. mata
+{txt}{hline 49} mata (type {cmd:end} to exit) {hline}
+{com}: B = (1,2 \ 3,0)
+{res}
+{com}: B
+{res}       {txt}1   2
+    {c TLC}{hline 9}{c TRC}
+  1 {c |}  {res}1   2{txt}  {c |}
+  2 {c |}  {res}3   0{txt}  {c |}
+    {c BLC}{hline 9}{c BRC}
+
+{com}: B[2,1]
+{res}  3
+
+{com}: B'B
+{res}{txt}[symmetric]
+        1    2
+    {c TLC}{hline 11}{c TRC}
+  1 {c |}  {res}10     {txt}  {c |}
+  2 {c |}  {res} 2    4{txt}  {c |}
+    {c BLC}{hline 11}{c BRC}
+
+{com}: det(B'B)
+{res}  36
+
+{com}: trace(B'B)
+{res}  14
+
+{com}: pinv(B'B) 
+{res}       {txt}           1              2
+    {c TLC}{hline 31}{c TRC}
+  1 {c |}  {res} .1111111111   -.0555555556{txt}  {c |}
+  2 {c |}  {res}-.0555555556    .2777777778{txt}  {c |}
+    {c BLC}{hline 31}{c BRC}
+
+{com}: *pseudoinverse
+{res}{err}                 <istmt>:  3499  pseudoinverse not found
+{txt}{search r(3499):r(3499);}
+
+{com}: I(3)
+{res}{txt}[symmetric]
+       1   2   3
+    {c TLC}{hline 13}{c TRC}
+  1 {c |}  {res}1        {txt}  {c |}
+  2 {c |}  {res}0   1    {txt}  {c |}
+  3 {c |}  {res}0   0   1{txt}  {c |}
+    {c BLC}{hline 13}{c BRC}
+
+{com}: end
+{txt}{hline}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\RACUNA~1\AppData\Local\Temp\STD06000000.tmp"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\racunalnica\Documents\Econometric2\Exc1b.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}28 Feb 2018, 09:38:23
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
