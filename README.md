@@ -1,5 +1,6 @@
 ## Econometrics2
-Econometrics 2,Time-Series and Panel Data Econometrics
+Econometrics 2,Time-Series and Panel Data Econometrics.
+Stata .dta files and .do files for the course.
 
 - prof. dr. Igor Masten
 - prof. dr. Sašo Polanec
@@ -9,3 +10,4 @@ Econometrics 2,Time-Series and Panel Data Econometrics
 ### Course:
 1. Intro
 2. Probability
+3. Regression
